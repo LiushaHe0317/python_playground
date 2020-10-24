@@ -34,8 +34,11 @@ class Solution:
                     count += 1
                     if not isChangeable(nums[:idx + 1], nums[idx + 1:]):
                         return False
+
+                if count > 1:
+                    return False
             else:
-                return False if count > 1 else True
+                return True
 
 
 if __name__ == '__main__':
